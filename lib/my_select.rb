@@ -1,3 +1,11 @@
-def my_select(collection)
- # your code here!
-end
+  def my_select(collection)
+    i=0
+    new_array=[]
+    while i < collection.length
+      if yield collection[i]
+        new_array.push collection[i]
+      end
+      i+=1
+    end
+    new_array
+  end
